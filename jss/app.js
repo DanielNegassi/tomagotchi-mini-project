@@ -13,7 +13,7 @@ const feedPet = () => {
   if (hunger == 10) {
     alert("GAME OVER");
   } else {
-    hunger =-1 ;
+    hunger --;
   }
   console.log('feed')
 
@@ -67,6 +67,17 @@ const increaseHunger = () => {
 	$('#hungerLevel').text('Hunger: ' + hunger);
 		}, 5*1000);
 	};
+
+  const increaseBoredom = () => {
+  		setInterval(function () {
+       if (boredom == 10) {
+          alert("GAME OVER");
+        } else{
+  			boredom ++;
+      }
+  	$('#boredomLevel').text('Boredom: ' + boredom);
+  		}, 5*1000);
+  	};
 //////////////////////////////////input/////////////////////////////////////////
 
 $('form').on('submit', (e) => {
@@ -75,4 +86,5 @@ $('form').on('submit', (e) => {
   $('#age').text(age);
   timePassing();
   increaseHunger();
+  increaseBoredom();
 });
