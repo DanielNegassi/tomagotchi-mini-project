@@ -10,11 +10,15 @@
     <div id="container">
       <div id='topDisplay'>
         <div class="topDisplay">
-      <button class="display" >hungerLevel</button>
-      <button class="display">sleepinessLevel</button>
-      <button class="display">boredomLevel</button>
+      <button class="display" id='hungerLevel' >hungerLevel</button>
+      <button class="display" id='sleepinessLevel'>sleepinessLevel</button>
+      <button class="display" id='boredomLevel'>boredomLevel</button>
       </div>
     </div>
+    <form>
+      <button type="submit" id="submit">submit</button>
+      <input id='input-box' type="text" placeholder="enter a name"></input>
+    </form>
       <div id="image">
       <div class="image">
         <img src="https://vignette.wikia.nocookie.net/tamagotchi/images/0/0b/Puchitchi.png/revision/latest?cb=20131023061823">
@@ -22,16 +26,17 @@
     </div>
     <div id='rightDisplay'>
       <div class='rightDisplay'>
-      <h4 id='name'>name</h4><br>
-      <h4 id='age'>age</h4><br>
-      <h4 id='timer'>timer</h4>
+      <h4 id='name'></h4><br>
+      <h4 id='age'></h4><br>
+      <h4 id='timer'></h4>
+      <ul></ul>
     </div>
     </div>
     <div id='bottomDisplay'>
         <div class="bottomDisplay">
-          <button class="display">feed</button>
-          <button class="display">lightsOff</button>
-          <button class="display">play</button>
+          <button class="display" id='feed'>feed</button>
+          <button class="display" id='lightsOff'>lightsOff</button>
+          <button class="display" id='play'>play</button>
       </div>
     </div>
 <script src="jss/app.js"></script>
