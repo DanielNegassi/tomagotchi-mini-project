@@ -21,13 +21,13 @@ form{
   width: 900px;
   height: 80px;
   margin-top: 100px;
-  margin-bottom: 80px;
-  margin-left: 600px;
+  margin-bottom: 150px;
+  margin-left: 700px;
 }
 #rightDisplay{
   position: relative;
   align-self:flex-end;
-  bottom: 100px;
+  bottom: 150px;
   right: 100px;
   font-size: 24px;
 }
@@ -37,10 +37,10 @@ form{
 #bottomDisplay{
   display:inline-flex;
   flex-direction:row;
-  margin-top: 50px;
+  margin-top: 20px;
   justify-content:space-between;
-  margin-left: 20px;
+  margin-left: 10px;
 }
-#image{
+image{
   opacity:1;
 }
