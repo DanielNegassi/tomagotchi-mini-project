@@ -1,7 +1,6 @@
 
 
 let time = 0;
-let age = 0;
 let hunger = 0;
 let boredom = 0;
 let sleepiness = 0;
@@ -10,7 +9,7 @@ let lightsToggle = true;
 
 //////////////////////////////////////feed pet/////////////////////////////////
 const feedPet = () => {
-  if (hunger == 10) {
+  if (hunger == 5) {
     alert("GAME OVER");
   } else {
     hunger --;
@@ -25,10 +24,10 @@ const feedPet = () => {
 const turnLightOff = () => {
   console.log('lightsOff');
 		if (lightsToggle === false) {
-    $('#container').css('opacity','1');
+    $('#image').css('opacity','1');
     lightsToggle = true;
     } else {
-    $('#container').css('opacity','0');
+    $('#image').css('opacity','0');
     lightsToggle = false;
     }
   };
@@ -38,7 +37,7 @@ const turnLightOff = () => {
 
 //////////////////////////////////////play//////////////////////////////////////
 const play = () => {
-  if (boredom == 10) {
+  if (boredom == 5) {
     alert("GAME OVER");
   } else {
     boredom --;
@@ -51,43 +50,41 @@ const play = () => {
   });
 /////////////////////////////////////timer//////////////////////////////////////
 const timePassing = () => {
-  if (time == 30) {
-    alert('GAME OVER');
-  } else {
 		setInterval(function () {
-			time ++;
-			$('#timer').text('Time: ' + time + ' s');
+		time ++;
+    if (time == 20) {
+    alert('GAME OVER')};
+		$('#timer').text('Time: ' + time + ' s');
 		}, 1*1000);
-  }
-	};
-//////////////////////////////////game metrics//////////////////////////////////
+  };
+//////////////////////////////////game metric//////////////////////////////////
 const increaseHunger = () => {
 		setInterval(function () {
-     if (hunger == 10) {
+     if (hunger == 5) {
         alert("GAME OVER");
       } else{
 			hunger ++;
     }
 	$('#hungerLevel').text('Hunger: ' + hunger);
-		}, 5*1000);
+  }, 1*1000);
 	};
 
   const increaseBoredom = () => {
   		setInterval(function () {
-       if (boredom == 10) {
+       if (boredom == 5) {
           alert("GAME OVER");
         } else{
   			boredom ++;
       }
   	$('#boredomLevel').text('Boredom: ' + boredom);
-  		}, 5*1000);
+   }, 1*1000);
   	};
 //////////////////////////////////input/////////////////////////////////////////
 
 $('form').on('submit', (e) => {
   e.preventDefault();
   $('#name').append($('#input-box').val());
-  $('#age').text(age);
+  $('#age').append($('#input-box2').val());
   timePassing();
   increaseHunger();
   increaseBoredom();
