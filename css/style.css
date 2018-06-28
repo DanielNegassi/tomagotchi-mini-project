@@ -10,24 +10,29 @@ body {
   opacity: 1;
 }
 .display{
-  font-size: 24px;
+  font-size: 30px;
   margin-left: 60px;
   font-style: italic;
 }
 form{
-  margin-top: 10px;
+  margin-top: 50px;
+  align-content: space-between;
+  font-size: 15px;
+}
+#topDisplay{
+  margin-left: -10px;
 }
 #image{
   width: 900px;
   height: 80px;
   margin-top: 100px;
   margin-bottom: 150px;
-  margin-left: 700px;
+  margin-left: 650px;
 }
 #rightDisplay{
-  position: relative;
+  position: absolute;
   align-self:flex-end;
-  bottom: 150px;
+  bottom: 250px;
   right: 100px;
   font-size: 24px;
 }
@@ -37,7 +42,7 @@ form{
 #bottomDisplay{
   display:inline-flex;
   flex-direction:row;
-  margin-top: 20px;
+  margin-top: 200px;
   justify-content:space-between;
   margin-left: 10px;
 }

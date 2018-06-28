@@ -6,11 +6,10 @@ let boredom = 0;
 let sleepiness = 0;
 let lightsToggle = true;
 
-
 //////////////////////////////////////feed pet/////////////////////////////////
 const feedPet = () => {
   if (hunger == 5) {
-    alert("GAME OVER");
+    alert('GAME OVER!');
   } else {
     hunger --;
   }
@@ -38,7 +37,7 @@ const turnLightOff = () => {
 //////////////////////////////////////play//////////////////////////////////////
 const play = () => {
   if (boredom == 5) {
-    alert("GAME OVER");
+    alert('GAME OVER!');
   } else {
     boredom --;
   }
@@ -53,7 +52,7 @@ const timePassing = () => {
 		setInterval(function () {
 		time ++;
     if (time == 20) {
-    alert('GAME OVER')};
+    alert('YOU WON!')};
 		$('#timer').text('Time: ' + time + ' s');
 		}, 1*1000);
   };
@@ -61,7 +60,7 @@ const timePassing = () => {
 const increaseHunger = () => {
 		setInterval(function () {
      if (hunger == 5) {
-        alert("GAME OVER");
+        alert('GAME OVER!');
       } else{
 			hunger ++;
     }
@@ -72,7 +71,7 @@ const increaseHunger = () => {
   const increaseBoredom = () => {
   		setInterval(function () {
        if (boredom == 5) {
-          alert("GAME OVER");
+          alert('GAME OVER!');
         } else{
   			boredom ++;
       }
