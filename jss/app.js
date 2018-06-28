@@ -15,11 +15,11 @@ const feedPet = () => {
   } else {
     hunger --;
   }
-  console.log('feed')
-
+  console.log('feed');
+  $('#hungerLevel').text('Hunger: ' + hunger)
   };
   $('#feed').on('click', (e) => {
-  $('#hungerLevel').text('Hunger: ' + hunger);
+  feedPet();
   });
 ///////////////////////////////////turnLightOff////////////////////////////////
 const turnLightOff = () => {
@@ -43,18 +43,22 @@ const play = () => {
   } else {
     boredom --;
   }
-  console.log('boredom decreased')
-
+  console.log('boredom decreased');
+  $('#boredomLevel').text('Boredom: ' + boredom);
   };
   $('#play').on('click', (e) => {
-    play();
+  play();
   });
 /////////////////////////////////////timer//////////////////////////////////////
 const timePassing = () => {
+  if (time == 30) {
+    alert('GAME OVER');
+  } else {
 		setInterval(function () {
 			time ++;
 			$('#timer').text('Time: ' + time + ' s');
 		}, 1*1000);
+  }
 	};
 //////////////////////////////////game metrics//////////////////////////////////
 const increaseHunger = () => {
